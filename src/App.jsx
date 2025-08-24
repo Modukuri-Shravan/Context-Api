@@ -1,8 +1,15 @@
 import React from 'react'
+import { UserProvider } from './Context/UserContext'
+import Navbar from './Components/Navbar'
+import LoginButton from './Components/LoginButton'
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <UserProvider>
+      <Navbar/>
+      <div style={{ margin: "20px" }}><LoginButton/></div>
+    </UserProvider>
   )
 }
 
